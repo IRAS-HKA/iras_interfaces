@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(iras_srvs)
+project(iras_interfaces)
 
 # Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
@@ -15,7 +15,8 @@ find_package(geometry_msgs REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 set(srv_files
-  "srv/Pose.srv"
+  "srv/MoveToPose.srv"
+  "srv/MoveToJointPosition.srv"
 )
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${srv_files}
