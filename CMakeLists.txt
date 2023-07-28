@@ -48,6 +48,7 @@ set(srv_files
   "srv/GetPlacePose.srv"
   "srv/GetNextBrick.srv"
   "srv/OnBrickEvent.srv"
+  "srv/LoadPlan.srv"
 )
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
