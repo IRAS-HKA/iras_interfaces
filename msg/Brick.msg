@@ -14,5 +14,7 @@ float64 gauge
 float64 gripper_pre_grip_distance
 # distance on z axis of the brick (may be negative if penetration is required)
 float64 gripper_grip_distance
+# true if the grasp should be a side grasp
+bool side_grasp
 
 
