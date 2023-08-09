@@ -10,17 +10,29 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
 endif()
 
+set(THIS_PACKAGE_INCLUDE_DEPENDS
+  geometry_msgs
+  moveit_msgs
+  shape_msgs
+  rosidl_default_generators
+)
+
 find_package(ament_cmake REQUIRED)
-find_package(geometry_msgs REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
+foreach(Dependency IN ITEMS ${THIS_PACKAGE_INCLUDE_DEPENDS})
+  find_package(${Dependency} REQUIRED)
+endforeach()
 
 set(srv_files
   "srv/MoveToPose.srv"
   "srv/MoveToJointPosition.srv"
+  "srv/AttachDetachObject.srv"
+  "srv/AddObjects.srv"
+  "srv/RemoveObject.srv"
+  "srv/SetScalingFactor.srv"
 )
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${srv_files}
-  DEPENDENCIES geometry_msgs
+  DEPENDENCIES geometry_msgs moveit_msgs shape_msgs
   ADD_LINTER_TESTS
 )
 

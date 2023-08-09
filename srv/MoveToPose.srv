@@ -1,4 +1,6 @@
 geometry_msgs/Pose pose
 bool cart
+float64 velocity_scaling_factor
+
 ---
 bool success
