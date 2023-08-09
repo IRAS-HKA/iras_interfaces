@@ -1,3 +1,4 @@
 Brick brick
 ---
-moveit_msgs/PlaceLocation place
+# vector of possible place location (permits to handle symmetry)
+moveit_msgs/PlaceLocation[] places

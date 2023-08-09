@@ -1,3 +1,4 @@
 Brick brick
 ---
-moveit_msgs/Grasp grasp
+# vector of possible pick location (permits to handle symmetry)
+moveit_msgs/Grasp[] grasps

@@ -11,6 +11,8 @@ int8[] manipulation_sequence
 bool disable_scene_handling
 # only plan, not execution
 bool only_plan
+# enforce the planner profile (empty means use default)
+string planner_profile
 ---
 # final state effectively reached
 PlanExecState state
