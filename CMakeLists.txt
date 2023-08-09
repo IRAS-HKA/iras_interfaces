@@ -12,6 +12,7 @@ endif()
 
 set(THIS_PACKAGE_INCLUDE_DEPENDS
   geometry_msgs
+  sr_manipulation_interfaces
   moveit_msgs
   shape_msgs
   rosidl_default_generators
@@ -22,6 +23,19 @@ foreach(Dependency IN ITEMS ${THIS_PACKAGE_INCLUDE_DEPENDS})
   find_package(${Dependency} REQUIRED)
 endforeach()
 
+set(msg_files
+  "msg/Brick.msg"
+  "msg/Wall.msg"
+  "msg/Pallet.msg"
+  "msg/PlanExecState.msg"
+  "msg/ManipType.msg"
+)
+
+set(action_files
+  "action/PlanMoveTo.action"
+  "action/Manip.action"
+)
+
 set(srv_files
   "srv/MoveToPose.srv"
   "srv/MoveToJointPosition.srv"
@@ -29,10 +43,17 @@ set(srv_files
   "srv/AddObjects.srv"
   "srv/RemoveObject.srv"
   "srv/SetScalingFactor.srv"
+  "srv/AddPallet.srv"
+  "srv/GetPickPose.srv"
+  "srv/GetPlacePose.srv"
+  "srv/GetNextBrick.srv"
+  "srv/OnBrickEvent.srv"
 )
 rosidl_generate_interfaces(${PROJECT_NAME}
+  ${msg_files}
   ${srv_files}
-  DEPENDENCIES geometry_msgs moveit_msgs shape_msgs
+  ${action_files}
+  DEPENDENCIES geometry_msgs moveit_msgs shape_msgs sr_manipulation_interfaces
   ADD_LINTER_TESTS
 )
 

@@ -14,7 +14,9 @@
 
   <depend>geometry_msgs</depend>
   <depend>moveit_msgs</depend>
+  <depend>sr_manipulation_interfaces</depend>
   <depend>shape_msgs</depend>
+  <depend>action_msgs</depend>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 

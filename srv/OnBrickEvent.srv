@@ -1,0 +1,12 @@
+# generic service to trigger actions depending on events
+# brick id the event refers to
+string id
+# event type
+int8 event
+int8 NONE=0
+int8 BRICK_PICKED=1
+int8 BRICK_PLACED=2
+int8 BRICK_DROPPED=3
+int8 BRICK_NOT_FOUND=4
+---
+bool success

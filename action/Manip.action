@@ -1,0 +1,23 @@
+# Plan and execute a manipulation action
+# name of the object to manipulate
+string object_id
+# Pick description, can be partial for a single action
+moveit_msgs/Grasp pick
+# Place description, can be partial for a single action
+moveit_msgs/PlaceLocation place
+# type of manipulation actions to do based on ManipType enums
+int8[] manipulation_sequence
+# if true no attach/detach is performed
+bool disable_scene_handling
+# only plan, not execution
+bool only_plan
+---
+# final state effectively reached
+PlanExecState state
+# full success or not
+bool success
+---
+# manipulation action currently performed
+int8 current_manip
+int8 current_step
+PlanExecState state
