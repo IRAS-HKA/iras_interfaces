@@ -29,6 +29,7 @@ set(msg_files
   "msg/Pallet.msg"
   "msg/PlanExecState.msg"
   "msg/ManipType.msg"
+  "msg/MoveWaypoint.msg"
 )
 
 set(action_files
@@ -38,6 +39,7 @@ set(action_files
 
 set(srv_files
   "srv/MoveToPose.srv"
+  "srv/MoveToPoseSeq.srv"
   "srv/MoveToJointPosition.srv"
   "srv/AttachDetachObject.srv"
   "srv/AddObjects.srv"
@@ -46,6 +48,7 @@ set(srv_files
   "srv/AddPallet.srv"
   "srv/GetPickPose.srv"
   "srv/GetPlacePose.srv"
+  "srv/GetMortarPoses.srv"
   "srv/GetNextBrick.srv"
   "srv/OnBrickEvent.srv"
   "srv/LoadPlan.srv"
