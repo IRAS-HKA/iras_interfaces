@@ -5,6 +5,10 @@ string object_id
 moveit_msgs/Grasp pick
 # Place description, can be partial for a single action
 moveit_msgs/PlaceLocation place
+# During jaw closing and opening, the brick gets moved if there is any clearance between
+# the gripper fingers and the brick. This gripper translation gets performed right
+# before the gripper jaw movement, compensating for this
+moveit_msgs/GripperTranslation brick_grasp_clearance_compensation
 # type of manipulation actions to do based on ManipType enums
 int8[] manipulation_sequence
 # if true no attach/detach is performed
