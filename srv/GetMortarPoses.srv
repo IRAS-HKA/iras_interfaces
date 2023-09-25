@@ -1,9 +1,9 @@
 # Brick to which the mortar is applied (required to compute motion offsets and pose offsets for the tcp_link)
-Brick brick
+maurob_interfaces/Brick brick
 # desired constant mortar application speed
 float64 constant_speed
 # desired translation acceleration (permits to calculate pre and post pose offsets for acceleration and decelaration)
 float64 translation_acceleration
 ---
 # vector of way points including pre and post position to allow accelerations
-iras_interfaces/MoveWaypoint[] targets
+sr_manipulation_interfaces/MoveWaypoint[] targets

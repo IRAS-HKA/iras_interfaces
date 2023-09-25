@@ -1,4 +1,4 @@
-Brick brick
+maurob_interfaces/Brick brick
 ---
 # vector of possible pick location (permits to handle symmetry)
 moveit_msgs/Grasp[] grasps
