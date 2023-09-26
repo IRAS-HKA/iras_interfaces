@@ -32,12 +32,6 @@ set(srv_files
   "srv/AddObjects.srv"
   "srv/RemoveObject.srv"
   "srv/SetScalingFactor.srv"
-  "srv/AddPallet.srv"
-  "srv/GetPickPose.srv"
-  "srv/GetPlacePose.srv"
-  "srv/GetMortarPoses.srv"
-  "srv/GetNextBrick.srv"
-  "srv/OnBrickEvent.srv"
   "srv/LoadPlan.srv"
 )
 rosidl_generate_interfaces(${PROJECT_NAME}
