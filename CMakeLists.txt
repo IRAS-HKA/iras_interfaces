@@ -12,8 +12,6 @@ endif()
 
 set(THIS_PACKAGE_INCLUDE_DEPENDS
   geometry_msgs
-  sr_manipulation_interfaces
-  maurob_interfaces
   moveit_msgs
   shape_msgs
   rosidl_default_generators
@@ -36,7 +34,7 @@ set(srv_files
 )
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${srv_files}
-  DEPENDENCIES geometry_msgs moveit_msgs shape_msgs sr_manipulation_interfaces maurob_interfaces
+  DEPENDENCIES geometry_msgs moveit_msgs shape_msgs
   ADD_LINTER_TESTS
 )
 
