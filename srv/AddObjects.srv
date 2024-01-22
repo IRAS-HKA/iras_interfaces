@@ -1,6 +1,0 @@
-moveit_msgs/CollisionObject[] object_details
-string[] paths_to_meshes
-bool mesh_or_standard
-
----
-bool add_success
