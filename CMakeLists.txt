@@ -44,6 +44,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "srv/MoveToJointPosition.srv"
   "srv/MoveToPose.srv"
   "srv/SendInt.srv"
+  "srv/MoveGripper.srv"
 
   "action/MoveArmMoveIt.action"
   #${MSGS}
